@@ -8,12 +8,20 @@ $icon-font-path: '../fonts/';
     font-family: "Gotham";
     font-style: normal;
     font-weight: 500;
-    src: url("/fonts/Gotham-Light.otf") format('opentype');
+	src: url("/fonts/Gotham-Light.eot") format('embedded-opentype'); 
+    src: url("/fonts/Gotham-Light.woff") format('woff'), 	
+		 url("/fonts/Gotham-Light.ttf") format('truetype'), 	
+		 url("/fonts/Gotham-Light.otf") format('opentype'),
+		 url("/fonts/Gotham-Light.eot?#iefix") format('embedded-opentype');
 }
 
+form {
+	
+	border-bottom: 2px #000 solid;
+	display: block;
+}
 body {
-	font-family: 'Gotham';
-	letter-spacing: 0.15384615384em; /* context = 13px; letter-spacing = 2px; */
+	font-family: 'Gotham', sans-serif;
 }
 
 address span, small {
@@ -25,17 +33,31 @@ address span, small {
 	position: relative;
 	width: 100%;
 	z-index: -1;
-	background: url('../images/Hero-Light.jpg') no-repeat center center fixed;
+	background: #CCC;
+	background: url('../images/Hero-Light.jpg') no-repeat center center fixed #CCC;
 	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
  	 background-size: cover;
 }
 
+	.ie8 {
+		section {
+			height: 800px !important;
+		}
+	}
+
+#multi-text {
+	span.active {
+		display: inline;
+	}	
+}
+
 .logo-mini-container {
 	display: block;
 	height: auto;
 	width: 35px;
+	height: 30px;
 	padding-bottom: 10px;
 }
 
@@ -54,6 +76,9 @@ div.vertical-spacer {
 	
 	&.min {
 		height: 3vh;
+	}
+	&.mid {
+		height: 6vh;
 	}
 }
 
@@ -77,15 +102,13 @@ section {
 	
 }
 
+.form-horizontal {
+	border-bottom: 2px #000 solid;
+}
+
 .no-padding {
 	padding: 0;
 }
-
-svg {
-		display: inline-block;
-		position: absolute;
-		z-index: 2;
-	}
 
 .left-logo {
 	padding-top: 40px;
@@ -111,7 +134,8 @@ svg {
 }
 
 address {
-	line-height: 1.7;
+	line-height: 20px;
+	margin-bottom: 0;
 }
 
 @media(max-width: 768px) {
@@ -123,14 +147,21 @@ address {
 	}	
 }
 
+@media (max-width: 767px) {
+	#footnote {
+		margin-bottom: 36px;
+	}
+}
 
 input {
 	
 	border: none;
+	border-bottom: 2px #000 solid;
 	background: #fff;
 	padding: 10px;
-	font-size: 16px;
+	font-size: 14px;
 	line-height: 1.8;
+	display: inline-block;
 	
 	&:focus {
 		outline: 0;
@@ -147,22 +178,9 @@ input {
 }
 
 form {
-	border-bottom: 2px solid #000;
+	border-bottom: 2px solid #000 !important;
 	text-align: left;
 	font-size: 1em;
-}
-
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
-
-  /* Make the masthead heading the same height as the navigation */
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
-  }
 }
 
 	h1{
@@ -187,14 +205,24 @@ form {
 		}
 	}
 
-	div {
-		-o-transition:.5s;
-  		-ms-transition:.5s;
-  		-moz-transition:.5s;
-  		-webkit-transition:.5s;
-		transition:.5s;
-	}
+div {
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	transition:.5s;
+}
 
+.emailwrap {
+	border-bottom: 2px #000 solid;
+	box-sizing: border-box;
+}
+
+
+#projects {
+	padding-left: 0;
+	list-style: none;
+}
 
 /* Custom page footer */
 .footer {
@@ -214,10 +242,6 @@ form {
   }
 
 
-#WeAreCollectivWorks {
-
-}
-
   /* Remove the padding we set earlier */
   .header,
   .marketing,
@@ -230,4 +254,27 @@ form {
   .jumbotron {
     border-bottom: 0;
   }
+}
+
+.browser-upgrade {
+	position: absolute;
+	background: none;
+	display: inline-block;
+}
+
+
+.fake-row {
+	display: table-row;
+}
+
+@media (max-width: 390px){
+	h1 {
+		font-size: 2.3em;
+	}
+	p {
+		font-size: 1em;
+	}
+	#footnote {
+		margin-bottom: 1em;
+	}
 }

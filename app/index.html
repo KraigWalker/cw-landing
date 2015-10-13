@@ -1,5 +1,9 @@
 <!doctype html>
-<html class="no-js" lang="en" prefix="og: http://ogp.me/ns#">
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" lang="en" prefix="og: http://ogp.me/ns#" > <!--<![endif]-->
 
 <head>
 	<meta charset="utf-8">
@@ -8,6 +12,7 @@
 	<title>CollectivWorks</title>
 
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+	<link rel="publisher" href="https://plus.google.com/101124176684882868002/">
 	<!-- Place favicon.ico in the root directory -->
 
 	<!-- build:css styles/vendor.css -->
@@ -19,35 +24,42 @@
 	<link rel="stylesheet" href="styles/main.css">
 	<!-- endbuild -->
 
-	<!-- build:js scripts/vendor/modernizr.js -->
-	<script src="/bower_components/modernizr/modernizr.js"></script>
-	<!-- endbuild -->
+	<!--[if lt IE 9]>
+		<style>.svg-logo{display: none !important;} form, #about { max-width: 500px; }</style>
+    	<script src="bower_components/html5shiv/dist/html5shiv.js"></script>
+	<![endif]-->
+	
 </head>
 
-<body>
-	<!--[if lt IE 10]>
+<body itemscope="" itemtype="http://schema.org/WebSite">
+	<!--[if lt IE 9]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
 	<article>
-
 		<!-- Full Screen Image-->
 		<section id="WeAreCollectivWorks">
 			<figure class="center-logo">
-				<div class="img-container">
-					<img src="images/CollectivWorks-Logo-Centered.svg" alt="">
+				<div class="fake-row">
+					<div class="img-container">
+						<svg class="svg-logo" width="262" height="120">
+							<title itemprop="author">CollectivWorks</title>
+							<image id="logoRef" xlink:href="images/CollectivWorks-Logo-Centered.svg" src="images/CollectivWorks-Logo-Centered.png" width="262" height="120" />
+						</svg>
+					</div>
 				</div>
 			</figure>
 		</section>
 
 		<!-- Business Card -->
-		<section id="WeCraftCommunities" itemscope="" itemtype="http://schema.org/Organization" class="section-overlay">
+		<section id="WeCraftCommunities" itemscope="" itemtype="http://schema.org/Organization" itemref="logoRef" class="section-overlay">
 			<div class="container-fluid">
 				<div class="row">
 					<div class="text-left">
 						<!-- Logo -->
 						<figure class="left-logo">
-							<img src="images/CollectivWorks-Logo-Left-Align.svg" alt="">
+							<svg width="240" height="31">
+ 								<image xlink:href="images/CollectivWorks-Logo-Left-Align.svg" src="images/CollectivWorks-Logo-Left-Align.png" width="240" height="31" />
+							</svg>
 						</figure>
 					</div>
 				</div>
@@ -55,20 +67,33 @@
 				<div class="vertical-spacer"></div>
 				
 				<div class="row">
-					<div class="col-xs-12 col-md-10 col-md-offset-2">
-						<h1><span class="light">We are</span><br/><span itemprop="name">CollectivWorks</span><br /><span class="light">&amp; we craft </span><span>communities.</span></h1>
-						<meta itemprop="url" content="http://collectivworks.com">
+					<div class="col-xs-11 col-xs-offset-1 col-sm-offset-1 col-md-10 col-md-offset-2 no-padding">
+						<h1>
+							<span class="light">We are</span><br/>
+							<span itemprop="name">CollectivWorks</span><br />
+							<span class="light">&amp; we craft </span>
+							<span id="multi-text">
+								<span class="multi active">networks.</span>
+								<span class="multi" style="display: none;">experiences.</span>
+								<span class="multi" style="display: none;">platforms.</span>
+								<span class="multi" style="display: none;">communities.</span>
+							</span>
+						</h1>
+						<meta itemprop="url" content="http://collectivworks.com" />
+						<meta itemprop="sameAs" content="https://twitter.com/CollectivWorks" />
+						<meta itemprop="sameAs" content="https://plus.google.com/101124176684882868002/" />
+						<meta itemprop="sameAs" content="https://www.facebook.com/Collectivworks" />
 					</div>
 				</div>
 				
 				<div class="vertical-spacer min"></div>
 				
 				<div class="row">
-					<div class="col-md-6 col-md-offset-2">
+					<div class="col-md-6 col-sm-7 col-md-offset-2 col-xs-offset-1 no-padding">
 						<!-- blurb -->
-						<div class="container-fluid">
+						<div class="container-fluid no-padding">
 							<div class="row">
-								<div class="col-md-9 col-sm-8 col-xs-10 no-padding">
+								<div class="col-md-9  col-sm-10 col-xs-10">
 									<p itemprop="description" id="about">
 										We provide new media platforms that are relevant and bring ownership of data and content back to the communities who use
 										them. Through deeper engagement and routes to monetization, CollectivWorks unlocks the potential of communities.
@@ -76,44 +101,64 @@
 								</div>
 							</div>
 							<div class="vertical-spacer min"></div>
+							<div class="vertical-spacer mid"></div>
 							<div class="row">
-								<div class="col-md-9 col-sm-8 col-xs-10 no-padding">
+								<div class="col-md-9  col-sm-10 col-xs-10">
 									<p>Find out what CollectivWorks can do for you</p>
 								</div>
-								<form action="" class="col-md-9 col-sm-8 col-xs-10 no-padding">
-									<div class="form-horizontal">
-										<label for="EmailAddress" class="sr-only">Email Address</label>
-										<input id="EmailAddress" type="email" class="col-xs-10 no-padding" placeholder="Enter your email address" />
-										<input type="submit" value="> Send" class="col-xs-2 no-padding"/>
-									</div>
-								</form>
+								<div class="vertical-spacer mid"></div>
+								
+								<!-- Email Submission Form -->
+								<div class="col-md-9 col-sm-10 col-xs-10">
+									<form action="/email" method="post">
+										<div class="form-horizontal">
+											<label id="emailLabel" for="EmailAddress" class="sr-only">Email Address</label>
+											<input aria-labelledby="emailLabel" id="EmailAddress" type="email" class="col-xs-8 col-sm-10 no-padding" placeholder="Enter your email address" required />
+											<input type="submit" value="> Send" class="col-xs-4 col-sm-2 no-padding"/>
+										</div>
+									</form>
+								</div>
 							</div>
 						</div>
 					</div>
 
 					<!-- 1 col on large. -->
-					<div class="col-md-3 cw-address ">
+					<div class="col-md-3 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-11 col-xs-offset-1 cw-address ">
 						<figure class="logo-mini-container">
-							<img src="images/CollectivWorks-Logo.svg" alt="">
+							<svg width="35" height="20">
+								<title>CollectivWorks</title>
+ 								<image xlink:href="images/CollectivWorks-Logo.svg" src="images/CollectivWorks-Logo.png" width="35" height="20" />
+							</svg>
 						</figure>
 						<address>
 							<span itemprop="telephone">+44 (0) 141 334 7062</span>
 							<span itemprop="email">info@collectivworks.com</span>
 							<div class="vertical-spacer min"></div>
-							<span itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress" itemref="addressCountry about">
+							<span itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress" itemref="about">
 								<span>CollectivWorks</span>
 								<span itemprop="StreetAddress">1 Bothwell Lane</span>
 								<span itemprop="addressLocality">Glasgow</span>
 								<span itemprop="postalCode">G12 8JS</span>
+								<meta itemprop="addressCountry" content="Scotland" />
 							</span>
 						</address>
 						<div class="vertical-spacer min"></div>
-						<small>Made In <span id="addressCountry" itemprop="addressCountry">Scotland</span> from Electrons</small>
-						<small>&copy; CollectivWorks 2015</small>
-					</div>
-				</div>
+							<ul id="projects">
+								Our Projects
+								<li itemprop="brand" itemscope itemtype="http://schema.org/Brand"><a href="https://kiltr.com/" itemprop="url"><span itemprop="name">KILTR</span></a></li>
+								<li itemprop="brand" itemscope itemtype="http://schema.org/Brand"><a href="https://www.equitypunks.com" itemprop="url"><span itemprop="name">BrewDog</span></a></li>
+							</ul>
+						
+						<div id="footnote">
+							<small>Made In Scotland from Electrons</small>
+							<small>&copy; CollectivWorks 2015</small>
+						</div>
+					</div> <!-- col -->
+				</div> <!-- /row -->
 			</div>	<!-- /container-fluid -->
 		</section>
+		<meta itemprop="copyrightYear" content="2015">
+		<meta itemprop="copyrightHolder" content="CollectivWorks"/>	
 	</article>
 
 	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
@@ -123,33 +168,25 @@
       e=o.createElement(i);r=o.getElementsByTagName(i)[0];
       e.src='https://www.google-analytics.com/analytics.js';
       r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
+      ga('create','UA-4114951-7', 'collectivworks.com');ga('send','pageview');
 	</script>
+	
+	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script>
 
 	<!-- build:js scripts/vendor.js -->
 	<!-- bower:js -->
-	<!--<script src="/bower_components/jquery/dist/jquery.js"></script>-->
 	<!-- endbower -->
 	<!-- endbuild -->
-
-	<!-- build:js scripts/plugins.js -->
-	<!--<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>-->
-	<!-- endbuild -->
+	
+	<!-- [if lt IE 9]>
+	<script>
+		// replace svg paths with png paths
+	</script>
+	<![endif]-->
+	
 
 	<!-- build:js scripts/main.js -->
 	<script src="scripts/main.js"></script>
 	<!-- endbuild -->
 </body>
-
 </html>
