@@ -41,9 +41,9 @@
 			<figure class="center-logo">
 				<div class="fake-row">
 					<div class="img-container">
-						<svg class="svg-logo" width="262" height="120">
+						<svg class="svg-logo" width="100%" height="120">
 							<title itemprop="author">CollectivWorks</title>
-							<image id="logoRef" xlink:href="images/CollectivWorks-Logo-Centered.svg" src="images/CollectivWorks-Logo-Centered.png" width="262" height="120" />
+							<image id="logoRef" xlink:href="images/CollectivWorks-Logo-Centered.svg" src="images/CollectivWorks-Logo-Centered.png" width="100%" height="120" />
 						</svg>
 					</div>
 				</div>
@@ -54,7 +54,7 @@
 		<section id="WeCraftCommunities" itemscope="" itemtype="http://schema.org/Organization" itemref="logoRef" class="section-overlay">
 			<div class="container-fluid">
 				<div class="row">
-					<div class="text-left">
+					<div class="col-xs-11 col-xs-offset-1 col-sm-offset-0 no-padding">
 						<!-- Logo -->
 						<figure class="left-logo">
 							<svg width="240" height="31">
@@ -101,22 +101,28 @@
 								</div>
 							</div>
 							<div class="vertical-spacer min"></div>
-							<div class="vertical-spacer mid"></div>
 							<div class="row">
-								<div class="col-md-9  col-sm-10 col-xs-10">
-									<p>Find out what CollectivWorks can do for you</p>
+								<div class="col-xs-12">
+									<p id="CurrentProjects">Current Projects</p>
 								</div>
-								<div class="vertical-spacer mid"></div>
-								
-								<!-- Email Submission Form -->
-								<div class="col-md-9 col-sm-10 col-xs-10">
-									<form action="/email" method="post">
-										<div class="form-horizontal">
-											<label id="emailLabel" for="EmailAddress" class="sr-only">Email Address</label>
-											<input aria-labelledby="emailLabel" id="EmailAddress" type="email" class="col-xs-8 col-sm-10 no-padding" placeholder="Enter your email address" required />
-											<input type="submit" value="> Send" class="col-xs-4 col-sm-2 no-padding"/>
-										</div>
-									</form>
+							</div>
+							<!--<div class="vertical-spacer min"></div>-->
+							<ul id="projects">
+								<li itemprop="brand" itemscope itemtype="http://schema.org/Brand">
+									<a href="https://kiltr.com/" itemprop="url" title="KILTR">
+										<span itemprop="name">KILTR</span>
+									</a>
+								</li>
+								<li itemprop="brand" itemscope itemtype="http://schema.org/Brand">
+									<a href="https://www.equitypunks.com" itemprop="url" title="BrewDog EquityPunks">
+										<span itemprop="name">BrewDog</span>
+									</a>
+								</li>
+							</ul>
+							<div class="row">
+								<div class="resultContainer" style="display:none; opacity: 0;">
+									<p class="bg-primary" id="resultMessage"></p>
+									<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 								</div>
 							</div>
 						</div>
@@ -131,8 +137,8 @@
 							</svg>
 						</figure>
 						<address>
-							<span itemprop="telephone">+44 (0) 141 334 7062</span>
-							<span itemprop="email">info@collectivworks.com</span>
+							<span itemprop="telephone"><a href="tel:01413347062">+44 (0) 141 334 7062</a></span>
+							<span itemprop="email"><a href="mailto:info@collectivworks.com">info@collectivworks.com</a></span>
 							<div class="vertical-spacer min"></div>
 							<span itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress" itemref="about">
 								<span>CollectivWorks</span>
@@ -143,12 +149,6 @@
 							</span>
 						</address>
 						<div class="vertical-spacer min"></div>
-							<ul id="projects">
-								Our Projects
-								<li itemprop="brand" itemscope itemtype="http://schema.org/Brand"><a href="https://kiltr.com/" itemprop="url"><span itemprop="name">KILTR</span></a></li>
-								<li itemprop="brand" itemscope itemtype="http://schema.org/Brand"><a href="https://www.equitypunks.com" itemprop="url"><span itemprop="name">BrewDog</span></a></li>
-							</ul>
-						
 						<div id="footnote">
 							<small>Made In Scotland from Electrons</small>
 							<small>&copy; CollectivWorks 2015</small>
@@ -184,7 +184,6 @@
 	</script>
 	<![endif]-->
 	
-
 	<!-- build:js scripts/main.js -->
 	<script src="scripts/main.js"></script>
 	<!-- endbuild -->

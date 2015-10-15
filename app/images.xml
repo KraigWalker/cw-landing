@@ -4,10 +4,10 @@
   <url>
     <loc>http://collectivworks.com</loc>
     <image:image>
-      <image:loc>http://collectivworks.com/images</image:loc>
+      <image:loc>http://collectivworks.com/images/logo/</image:loc>
     </image:image>
     <image:image>
-      <image:loc>http://collectivworks.com/images</image:loc>
+      <image:loc>http://collectivworks.com/images/</image:loc>
     </image:image>
   </url> 
 </urlset> 

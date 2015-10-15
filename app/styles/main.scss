@@ -118,11 +118,10 @@ section {
 	}
 	
 	@media(max-width: 992px) {
-		padding-left: 15px;
+		padding-left: 0;
 	}
 	
 	@media(max-width: 768px) {
-		
 		img {
 			width: 2402px;	
 		}
@@ -141,13 +140,13 @@ address {
 @media(max-width: 768px) {
 	.cw-address {
 		padding-top: 10vh;
+		padding-left: 0;
 	}
+	
 	p {
 		letter-spacing: 1px;
-	}	
-}
-
-@media (max-width: 767px) {
+	}
+	
 	#footnote {
 		margin-bottom: 36px;
 	}
@@ -218,10 +217,19 @@ div {
 	box-sizing: border-box;
 }
 
+a {
+	text-decoration: none !important;
+}
+
+li {
+	margin-top: 5px;
+	line-height: 1em;
+}
 
 #projects {
 	padding-left: 0;
 	list-style: none;
+	
 }
 
 /* Custom page footer */
@@ -241,19 +249,6 @@ div {
     max-width: 730px;
   }
 
-
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
 }
 
 .browser-upgrade {
@@ -261,7 +256,6 @@ div {
 	background: none;
 	display: inline-block;
 }
-
 
 .fake-row {
 	display: table-row;
