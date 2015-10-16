@@ -4,10 +4,20 @@
   <url>
     <loc>http://collectivworks.com</loc>
     <image:image>
-      <image:loc>http://collectivworks.com/images/logo/</image:loc>
+			<image:title>CollectivWorks</image:title>
+      <image:loc>http://collectivworks.com/images/CollectivWorks-Logo-Centered.png</image:loc>
     </image:image>
     <image:image>
-      <image:loc>http://collectivworks.com/images/</image:loc>
+			<image:title>CollectivWorks</image:title>
+      <image:loc>http://collectivworks.com/images/CollectivWorks-Logo-Left-Align.png</image:loc>
+    </image:image>
+		<image:image>
+			<image:title>CollectivWorks</image:title>
+      <image:loc>http://collectivworks.com/images/CollectivWorks-Logo.png</image:loc>
+    </image:image>
+		<image:image>
+			<image:title>CollectivWorks</image:title>
+      <image:loc>http://collectivworks.com/images/hero.png</image:loc>
     </image:image>
   </url> 
 </urlset> 
