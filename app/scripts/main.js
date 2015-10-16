@@ -30,6 +30,10 @@ $(document).ready(function(){
 		});
 	}
 
+	$('article').on('click', function() {
+		$('html, body').animate({ scrollTop: $('#WeCraftCommunities').offset().top }, 1000 );
+	});
+
 	function handleVisibilityChange() {
 		if(document[hidden]) {
 			active = false;
