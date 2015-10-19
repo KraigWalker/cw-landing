@@ -22,7 +22,6 @@ form {
 }
 body {
 	font-family: 'Gotham', sans-serif;
-	visibility: visible !important;
 }
 
 address span, small {
@@ -100,7 +99,6 @@ section {
 		display: table-cell;
 		vertical-align: middle;
 	}
-	
 }
 
 .form-horizontal {
@@ -229,23 +227,11 @@ h1{
 	color:#000;
 	.light {
 		color: #777;
-		-o-transition:.5s;
-		-ms-transition:.5s;
-		-moz-transition:.5s;
-		-webkit-transition:.5s;
 		
 		&:hover {
 			color: #000;
 		}
 	}
-}
-
-div {
-	-o-transition:.5s;
-	-ms-transition:.5s;
-	-moz-transition:.5s;
-	-webkit-transition:.5s;
-	transition:.5s;
 }
 
 .emailwrap {
